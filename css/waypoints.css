@@ -1,0 +1,54 @@
+
+.notvisible {
+  height:95%;
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:auto auto;
+  opacity: 0;
+  transition: all 700ms ease-in-out;
+  border: 5px solid black;
+  z-index:-1;
+}
+
+.js-visible {
+  opacity: 1;
+  border: 5px dotted green;
+}
+
+.trigger{
+  height:100vh;
+  width:100%;
+  margin:0 auto;
+  border: 2px solid red;
+
+}
+
+.text {
+  width:500px;
+  height:800px;
+  margin:0 auto;
+  background-color: blue;
+  opacity: 0.5;
+  color:white;
+}
+/*.border {
+  width:200px;
+  height:200px;
+  position: relative;
+  border: 1px solid red;
+}*/
+/*.dipper2 {
+  transition: all 700ms ease-in-out;
+}*/
+
+/*#background {
+  position: sticky;
+top: 0px;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: -1;
+}

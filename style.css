@@ -1,0 +1,408 @@
+
+
+html {
+  display: inline
+  font-size: 1em;
+  font-family: "Georgia";
+  color:hsl(0,0%,85%);
+  line-height:1.7;
+  background-color: black;
+}
+
+/*--------scroll bar------------------------------------------------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: hsl(0,0%,85%);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(0,0%,95%);
+}
+
+/*--------navigation bar------------------------------------------------------------------*/
+
+/* define a fixed width for the entire menu */
+.navigation {
+  z-index: 2;
+  position:fixed;
+  top: 0;
+  width: 100%;
+  max-height:80%;
+  background-color: rgba(0,0,0,0.9);   /* 70% opaque black */
+  border-bottom: 1px solid hsla(0,0%,85%,0.5);
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu {
+  list-style: none;
+  text-align: center;
+  width:100%;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+}
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 100%;
+}
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.submenu li:hover .subsubmenu {
+  display: block;
+  max-height: 100%;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  list-style: none;
+  padding-left:0;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.subsubmenu {
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  text-align: center;
+  height: 200px;
+  overflow: auto;
+  -webkit-transition: all 0.5s ease-in-out;
+  border-top: 1px solid hsla(0,0%,85%,0.5);
+}
+
+/*-------------------------------------------------------------------*/
+a {
+    color: hsl(30, 50%, 50%);
+    text-decoration: none;
+  }
+
+  /* mouse over link */
+  a:hover {
+      color: hsl(30, 80%, 80%);
+  }
+
+button{
+  color: hsl(30, 50%, 50%);
+  background-color:inherit;
+  border-width:0;
+  display:block;
+
+}
+iframe{
+    margin: 0 auto
+
+}
+h1{
+    /*text-transform: uppercase;*/
+    font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
+    text-align:center;
+    color:hsl(0,0%,95%);
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    min-width:600px;
+    max-width:900px;
+    margin: 0 auto;
+    padding: 1% 1%;
+}
+h5,h6{
+    text-align:center;
+}
+p,ul{
+  min-width:300px;
+  max-width:600px;
+  margin: 0 auto;
+}
+
+li{
+  list-style: none;
+}
+
+.summary{
+  border: 1px solid lightgray;
+  min-width:300px;
+  max-width:750px;
+  margin: 0 auto;
+}
+
+.summarytitle{
+  border: 1px solid lightgray;
+  min-width:300px;
+  max-width:750px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:hsl(0,0%,90%);
+}
+
+.summaryimage{
+  border: 1px solid lightgray;
+  min-width:300px;
+  max-width:600px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  color:hsl(0,0%,90%);
+}
+
+.imgcomment {
+    height:700px;      /* equals max image height */
+    width: 10px;
+    /*white-space: nowrap;*/
+    /*color: grey;*/
+    font-weight:bold;
+    font-style: italic;
+    text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    margin: 1em 0;
+}
+
+.comment{
+  display:inline-block;
+  width: 50%;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin:20px;
+}
+
+.notvisible {
+  max-height:80%;
+  max-width:95%;
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:auto auto;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+  z-index:-1;
+}
+
+.js-visible {
+  opacity: 1;
+}
+
+.redborder{
+  border: 2px solid red;
+  }
+
+.navbar{
+  position: fixed;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+
+
+}
+
+/* Links inside the navbar */
+.navbar a {
+    display: block;
+    min-width:600px;
+    max-width:900px;
+    margin: 0 auto;
+    width:90%;
+    text-align: right;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+    min-width:600px;
+    max-width:900px;
+    margin: 0 auto;
+    width:90%;
+    text-align: right;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    position: relative;
+    display: block;
+    float: right;
+
+}
+
+.dropbtn {
+  position: static;
+  float: right;
+
+}
+
+.trigger{
+  height:100vh;
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  /*border: 2px solid red;*/
+}
+
+.imgintro{
+  height:1px;
+  z-index:-1;
+}
+
+.intro{
+      font-style: italic;
+      text-align:center;
+    }
+.uppercase{
+    text-transform: uppercase;
+    font-weight: bold;
+    color:hsl(0,0%,90%);
+}
+.halfopaque{
+    opacity: 0.5;
+}
+.endofday{
+  text-align:center;
+  padding-top:20px;
+  padding-bottom:100px;
+}
+.endofday:before{
+content:'\002a';
+}
+.spacingforcontent{
+padding-bottom:60%;
+
+}
+
+.fabacademytitle{
+margin: auto;
+
+z-index:3;
+}
+.inline{
+display: inline-block;
+width: 120px;
+}
+
+.inline2{
+display: inline-block;
+}
+
+.aligncentre{
+margin: auto;
+width: 70%;
+height:20%;
+}
+
+.aligncentre2{
+display:block;
+margin: auto;
+width: 50%;
+height:20%;
+}
+
+.aligncentre3{
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.alignleft{
+float: left;
+}
+
+.alignright{
+float: right;
+}
+
+.alignheight{
+
+margin: auto 0;
+
+.lowercase{
+ text-transform: lowercase;
+}
+
+.end{
+  text-align:center;
+  padding-top:15%;
+}
+.end:before{
+content:'\002a \002a \002a';
+}
+
+
+/*For fixed drop-down menu*/
+
+/* The navigation bar */
+.newone{
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+/* Main content
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay
+}
