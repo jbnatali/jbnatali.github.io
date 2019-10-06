@@ -253,9 +253,14 @@ p.description {
   font-size: 16px;
   color: #777777;
 }
-
+a:link {
+  color: hotpink;
+}
 a:hover, a:focus {
   text-decoration: none;
+}
+a:visited {
+  color: hotpink;
 }
 
 a:focus, a:active,
